@@ -1,0 +1,33 @@
+// Congelar un objeto para no poderlo modificar
+
+'use strict';
+
+const producto = {
+    nombre: 'Monitor de 20 pulgadas',
+    precio: 300,
+    disponible: true,
+}
+console.log(producto);
+
+producto.imagen = 'imagen.jpg';
+producto.disponible = false;
+console.log(producto);
+
+// Cómo hacer que un objeto se comporte como una constante y no pueda ser modificado
+// Habilitar el "Modo estricto" arriba
+// "use strict" hace que evalúe el código de JavaScript de manera estricta, no permite malas prácticas en el documento
+
+// x = 20;
+// console.log(x); --> al tener habilitado el 'use strict', nos dirá que no está definida la constante o variable
+const x = 20; // esta sería la manera correcta
+console.log(x);
+
+// Congelar un objeto
+Object.freeze( producto );
+
+// producto.peso = '1kg';
+// delete producto.precio;
+// console.log(producto); --> Me tira error: al congelar el objeto, no puedo agregar ni quitar propiedades
+
+// Método para saber si objeto está congelado
+console.log(Object.isFrozen(producto));
