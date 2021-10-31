@@ -1,0 +1,25 @@
+// Objetos dentro de objetos
+
+const producto = {
+    nombre: 'Monitor de 20 pulgadas',
+    precio: 300,
+    disponible: true,
+    información: {
+        medidas: {
+            peso: '1kg',
+            medida: '1m',
+        },
+    fabricación: {
+        país: 'China'
+    }
+    }
+}
+
+console.log(producto);
+
+console.log(producto.información);
+//console.log(producto.información.peso);
+//console.log(producto.información.medida);
+
+//Llegar hasta PAIS
+console.log(producto.información.fabricación.país);
